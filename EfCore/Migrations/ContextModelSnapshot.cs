@@ -73,7 +73,7 @@ namespace EfCore.Migrations
                 {
                     b.HasOne("EfCore.Entities.Claim", "Claim")
                         .WithMany("UserClaims")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("ClaimId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

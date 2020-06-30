@@ -43,8 +43,8 @@ namespace EfCore.Migrations
                 {
                     table.PrimaryKey("PK_UserClaims", x => new { x.ClaimId, x.UserId });
                     table.ForeignKey(
-                        name: "FK_UserClaims_Claims_UserId",
-                        column: x => x.UserId,
+                        name: "FK_UserClaims_Claims_ClaimId",
+                        column: x => x.ClaimId,
                         principalTable: "Claims",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);

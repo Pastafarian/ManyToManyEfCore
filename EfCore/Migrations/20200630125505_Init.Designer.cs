@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EfCore.Migrations
 {
     [DbContext(typeof(Context))]
-    [Migration("20200630123701_Init")]
+    [Migration("20200630125505_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -75,7 +75,7 @@ namespace EfCore.Migrations
                 {
                     b.HasOne("EfCore.Entities.Claim", "Claim")
                         .WithMany("UserClaims")
-                        .HasForeignKey("UserId")
+                        .HasForeignKey("ClaimId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
