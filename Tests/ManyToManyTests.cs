@@ -23,8 +23,8 @@ namespace Tests
 			context.Users.Add(userDave);
 			context.SaveChanges();
 
-			context.UserClaims.Add(new UserClaim { Claim = idClaim, User = userDave });
-			context.UserClaims.Add(new UserClaim  { Claim = nameClaim, User = userDave });
+			context.UserClaims.Add(new UserClaim { Claim = idClaim, ClaimId = idClaim.Id, User = userDave, UserId = userDave.Id});
+			context.UserClaims.Add(new UserClaim  { Claim = nameClaim, ClaimId = nameClaim.Id, User = userDave, UserId = userDave.Id});
 
 			context.SaveChanges();
 
